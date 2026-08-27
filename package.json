@@ -6,8 +6,10 @@
     "scripts": {
         "dev": "vite --config vite.config.ts --host 0.0.0.0",
         "build": "vite build --config vite.config.ts",
+        "package": "zip -r scamsignal-$(node -p \"require('./package.json').version\").zip dist/",
         "serve": "vite preview --config vite.config.ts --host 0.0.0.0",
         "typecheck": "tsc -p tsconfig.json --noEmit"
+
     },
     "devDependencies": {
         "@hookform/resolvers": "^3.10.0",
